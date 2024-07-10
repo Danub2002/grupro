@@ -1,7 +1,7 @@
-import goat from '../public/goat.svg'
-import book from '../public/book.svg'
-import star from '../public/star.svg'
-import pencil from '../public/pencil.svg'
+import goat from '../../public/goat.svg'
+import book from '../../public/book.svg'
+import star from '../../public/star.svg'
+import pencil from '../../public/pencil.svg'
 import Card from '@/components/Card'
 import Image from 'next/image'
 
