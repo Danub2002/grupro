@@ -1,29 +1,20 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import { useState } from "react";
 
-const AccordionItem = ({ title, content }) => {
+export default function Box({ title, topics }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleAccordion = () => {
+  const handleIsOpenChange = () => {
+    console.log("Button clicked"); // Debugging statement
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className="border-b border-gray-200">
-      <button
-        className="flex justify-between items-center w-full p-4 text-left"
-        onClick={toggleAccordion}
-      >
-        <span>{title}</span>
-        <span>{isOpen ? '-' : '+'}</span>
+    <div className="border p-4">
+      <button onClick={handleIsOpenChange}>
+        Toggle
       </button>
-      {isOpen && (
-        <div className="p-4 bg-gray-100">
-          {content}
-        </div>
-      )}
+      {isOpen && <div>Content is open</div>}
     </div>
   );
-};
-
-export default AccordionItem;
+}
